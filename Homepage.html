@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detection using Machine Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+	    background-color:#0f0e13;
+  	    background-image: 
+   	    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+            radial-gradient(at 50% 100%, hsla(225,39%,25%,1) 0, transparent 50%);
+ 		    }
+        .container {
+            text-align: center;
+            padding: 50px 20px; /* Adjust the top and bottom padding as needed */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgb(39, 51, 89, 0.4);
+ 	    border-radius: 16px;
+ 	    backdrop-filter: blur(5px);
+  	    -webkit-backdrop-filter: blur(5px);
+  	    border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff; /* Add text color for better visibility on dark background */
+            height: auto; /* Remove fixed height to allow for content to dictate height */
+            width: 50vw; /* Make the container take up the full screen width */
+        }
+
+        label {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 50vw;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+    nav {
+        background-color: rgba(0, 0, 0, 0.3); /* Transparent black background */
+        padding: 15px;
+        text-align: center;
+       
+      }
+  
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+  
+      nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white on hover */
+      }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <nav>
+            <a href="https://www.cyberriskaware.com/protect-against-phishing-attacks-guide/" target="blank">GUIDE</a>
+            <a href="https://safebrowsing.google.com/safebrowsing/report_phish/?hl=en"  target="blank">Report Website</a>
+            <a href="https://portswigger.net/daily-swig/phishing">NEWS</a>
+          </nav>
+        <h1>Phishing Detection using Machine Learning</h1>
+        <form action='/Predict' method='POST'>
+        <label >Enter URL:</label>
+        <input type="text" id="urlInput" name="urlInput" placeholder="Enter URL...">
+        <button type =submit >Detect</button>
+        </form>
+        <div id="result">{{pred}}</div>
+    </div>
+  <!-- <script>
+        function detectPhishing() {
+            // Add your machine learning detection logic here
+            // For simplicity, let's just show a basic message
+            document.getElementById('result').innerText = '';
+        }
+    </script>  -->
+
+</body>
+</html>
